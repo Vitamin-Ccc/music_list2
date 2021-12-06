@@ -6,8 +6,8 @@ import Songs from './Songs';
 class App extends Component{
   state = {
     songs: [
-      {id:1, name: "Run", artist: "BTS",},
-      {id:2, name: "All I Want for Christmas Is You", artist: "Mariah Carey",},
+      {id:1, name: "Run", artist: "BTS", },
+      {id:2, name: "All I Want for Christmas Is You", artist: "Mariah Carey", image: "https://m.media-amazon.com/images/I/81U6o32LuUL._SL1500_.jpg"},
       {id:3, name: "It's Beginning to Look a Lot Like Christmas", artist: "Michael Buble",},
       {id:4, name: "Santa Tell Me", artist: "Ariana Grande",},
     ]
