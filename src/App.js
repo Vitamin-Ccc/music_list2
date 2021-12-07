@@ -1,6 +1,7 @@
 import { Component } from 'react';
-import { Container, Header } from 'semantic-ui-react';
+import { Container, Divider, Header } from 'semantic-ui-react';
 import './App.css';
+import SongForm from './SongForm';
 import Songs from './Songs';
 
 class App extends Component{
@@ -14,7 +15,7 @@ class App extends Component{
   };
 
   addSong = (song) => {
-    const newSongs = [song, ...this.state.songs];
+    const newSongs = [song, ...this.state.songs]
     this.setState({
       songs: newSongs,
     });
@@ -30,8 +31,10 @@ class App extends Component{
 
   render(){
     return (
-      <Container>
+      <Container style = {{marginTop: "20px"}}>
         <Header as = "h1" textAlign="center" color = "red">Christmas Songs</Header>
+        <SongForm addSong = {this.addSong}/>
+        <Divider />
         <Songs songs = {this.state.songs} deleteSong={this.deleteSong}/>
       </Container>
     );
