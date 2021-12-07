@@ -23,9 +23,9 @@ class Song extends React.Component {
             </Button>
           </div>
         </Card.Content>
-        <Card.Content>
+        {/* <Card.Content>
           <SongForm name={name} id={id} artist={artist} image={image} />
-        </Card.Content>
+        </Card.Content> */}
       </Card>
     )
     // })

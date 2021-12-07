@@ -97,7 +97,7 @@ class SongForm extends React.Component {
   render() {
     return (
       <div>
-        <Header>Song Form</Header>
+        <Header>New Song Form</Header>
         <Button onClick = {this.toggleForm}>{this.state.show ? "Hide" : "Show"}</Button>
         {this.state.show && (
         <Form onSubmit={this.handleSubmit}>
