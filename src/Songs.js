@@ -1,11 +1,11 @@
 import React from "react";
-import { Button, Card, Image } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
 import Song from "./Song";
 
 class Songs extends React.Component {
   renderSongs = () => {
-    return this.props.songs.map((song) => (
-      <Song deleteSong={this.props.deleteSong} {...song} />
+    return this.props.songs.map((s) => (
+      <Song deleteSong={this.props.deleteSong} {...s} />
     ));
   };
   render() {
@@ -15,9 +15,6 @@ class Songs extends React.Component {
       </Card.Group>
     )
   }
-
-
-
 }
 
 export default Songs;

@@ -25,7 +25,7 @@ class App extends Component{
     return (
       <Container>
         <Header as = "h1" textAlign="center" color = "red">Christmas Songs</Header>
-        <Songs songs = {this.state.songs}/>
+        <Songs songs = {this.state.songs} deleteSong={this.deleteSong}/>
       </Container>
     );
   }
