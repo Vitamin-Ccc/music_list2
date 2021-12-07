@@ -17,7 +17,7 @@ class Song extends React.Component {
               <Button basic color='green'>
                 Edit
               </Button>
-              <Button basic color='red' onClick={() => deleteSong(id)}>
+              <Button basic color='red' onClick={() => this.props.deleteSong(id)}>
                 Delete
               </Button>
             </div>
