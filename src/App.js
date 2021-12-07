@@ -13,11 +13,18 @@ class App extends Component{
     ]
   }
 
+  deleteSong = (id) => {
+    const filteredSongs = this.state.songs.filter((s) => s.id !== id);
+    this.setState({
+      songs: filteredSongs,
+    });
+  };
+
 
   render(){
     return (
       <Container>
-        <Header as = "h1">Music List</Header>
+        <Header as = "h1" textAlign="center" color = "red">Christmas Songs</Header>
         <Songs songs = {this.state.songs}/>
       </Container>
     );

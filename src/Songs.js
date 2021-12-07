@@ -1,34 +1,23 @@
 import React from "react";
 import { Button, Card, Image } from 'semantic-ui-react';
+import Song from "./Song";
 
-const Songs = ({ songs }) => {
-  const renderSongs = () => {
-    return songs.map((song) => {
-      return (
-        <Card>
-          <Image src = {song.image} />
-          <Card.Content>
-            <Card.Header>{song.name}</Card.Header>
-            <Card.Meta>{song.artist}</Card.Meta>
-          </Card.Content>
-          <Card.Content extra>
-            <div className='ui two buttons'>
-              <Button basic color='green'>
-                Read
-              </Button>
-              <Button basic color='red'>
-                Delete
-              </Button>
-            </div>
-          </Card.Content>
-        </Card>
-      )
-    })
+class Songs extends React.Component {
+  renderSongs = () => {
+    return this.props.songs.map((song) => (
+      <Song deleteSong={this.props.deleteSong} {...song} />
+    ));
+  };
+  render() {
+    return (
+      <Card.Group>
+        {this.renderSongs()}
+      </Card.Group>
+    )
   }
-  return (
-    <Card.Group>
-      {renderSongs()}
-    </Card.Group>
-  )
+
+
+
 }
+
 export default Songs;
