@@ -1,11 +1,9 @@
 import React from "react";
 import { Button, Card, Image } from 'semantic-ui-react';
-import SongForm from "./SongForm";
 
 class Song extends React.Component {
   render = () => {
     const { name, artist, id, image } = this.props;
-    // return songs.map((song) => {
     return (
       <Card>
         <Image src={image} />
@@ -23,12 +21,8 @@ class Song extends React.Component {
             </Button>
           </div>
         </Card.Content>
-        {/* <Card.Content>
-          <SongForm name={name} id={id} artist={artist} image={image} />
-        </Card.Content> */}
       </Card>
     )
-    // })
   }
 }
 

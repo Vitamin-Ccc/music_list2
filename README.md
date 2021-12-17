@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Requirements:
+
+Add styled-components to your project from yesterday
+Customize some semantic components using styled-components
+Create your own styled-components
+Add an animation effect
+Add a hover and other pseudo selectors
+Utilize flexbox.
+media query
+
+Bonus :  There is plenty to explore here, try making things look real nice and consistent and experiment with all the things CSS
+
+Have your colors in a separate file and import them, ie no hardcode colors

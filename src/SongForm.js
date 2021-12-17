@@ -2,7 +2,7 @@ import React from "react";
 import { Header, Form, Button } from "semantic-ui-react";
 
 class SongForm extends React.Component {
-  state = { name: "", artist: "", image: "", show: true };
+  state = { name: "", artist: "", image: "", show: false };
   handleChange = (e) => {
     console.log(e.target.value);
     this.setState({ [e.target.name]: e.target.value });

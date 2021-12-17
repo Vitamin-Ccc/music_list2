@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from 'semantic-ui-react';
+import { Card, Grid } from 'semantic-ui-react';
 import Song from "./Song";
 
 class Songs extends React.Component {
@@ -10,7 +10,7 @@ class Songs extends React.Component {
   };
   render() {
     return (
-      <Card.Group>
+      <Card.Group itemsPerRow={4}>
         {this.renderSongs()}
       </Card.Group>
     )

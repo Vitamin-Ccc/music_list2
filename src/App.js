@@ -1,16 +1,17 @@
 import { Component } from 'react';
-import { Container, Divider, Header } from 'semantic-ui-react';
+import { Container, Divider } from 'semantic-ui-react';
+import styled from 'styled-components';
 import './App.css';
 import SongForm from './SongForm';
 import Songs from './Songs';
 
-class App extends Component{
+class App extends Component {
   state = {
     songs: [
-      {id:1, name: "All I Want for Christmas Is You", artist: "Mariah Carey", image: "https://m.media-amazon.com/images/I/81U6o32LuUL._SL1500_.jpg"},
-      {id:2, name: "It's Beginning to Look a Lot Like Christmas", artist: "Michael Buble", image: "https://m.media-amazon.com/images/I/61M3mNpxJML._SX355_.jpg"},
-      {id:3, name: "Santa Tell Me", artist: "Ariana Grande", image: "https://m.media-amazon.com/images/I/61HbB2VISCL._SS500_.jpg"},
-      {id:4, name: "Jingle Bell Rock", artist: "Bobby Helms", image: "https://thinkcountrymusic.com/wp-content/uploads/2020/12/bobby-helms-jingle-bell-rock.jpg" },
+      { id: 1, name: "All I Want for Christmas Is You", artist: "Mariah Carey", image: "https://m.media-amazon.com/images/I/81U6o32LuUL._SL1500_.jpg" },
+      { id: 2, name: "It's Beginning to Look a Lot Like Christmas", artist: "Michael Buble", image: "https://m.media-amazon.com/images/I/61M3mNpxJML._SX355_.jpg" },
+      { id: 3, name: "Santa Tell Me", artist: "Ariana Grande", image: "https://m.media-amazon.com/images/I/61HbB2VISCL._SS500_.jpg" },
+      { id: 4, name: "Jingle Bell Rock", artist: "Bobby Helms", image: "https://thinkcountrymusic.com/wp-content/uploads/2020/12/bobby-helms-jingle-bell-rock.jpg" },
     ],
   };
 
@@ -29,15 +30,28 @@ class App extends Component{
   };
 
 
-  render(){
+  render() {
     return (
-      <Container style = {{marginTop: "20px"}}>
-        <Header as = "h1" textAlign="center" color = "red">Christmas Songs</Header>
-        <SongForm addSong = {this.addSong}/>
+      <Container style={{ marginTop: "20px" }}>
+        <HeaderText as="h1" color="red">Christmas Songs</HeaderText>
         <Divider />
-        <Songs songs = {this.state.songs} deleteSong={this.deleteSong}/>
+        <SongForm addSong={this.addSong} />
+        <Divider />
+        <Songs songs={this.state.songs} deleteSong={this.deleteSong} />
       </Container>
     );
-  } 
-}
+  };
+};
+
+const HeaderText = styled.h1`
+  font-family: 'Corinthia', cursive;
+  font-size: 100px;
+  text-align: center;
+  background: -webkit-radial-gradient(circle farthest-corner at center center, #CF2411 0%, #0CCF26 42%);
+  background: -moz-radial-gradient(circle farthest-corner at center center, #CF2411 0%, #0CCF26 42%);
+  background: radial-gradient(circle farthest-corner at center center, #CF2411 0%, #0CCF26 42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
 export default App;
