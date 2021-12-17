@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { Container, Divider } from 'semantic-ui-react';
 import styled from 'styled-components';
 import './App.css';
+import { HeaderText } from './components/HeaderText';
 import SongForm from './SongForm';
 import Songs from './Songs';
 
@@ -42,16 +43,5 @@ class App extends Component {
     );
   };
 };
-
-const HeaderText = styled.h1`
-  font-family: 'Corinthia', cursive;
-  font-size: 100px;
-  text-align: center;
-  background: -webkit-radial-gradient(circle farthest-corner at center center, #CF2411 0%, #0CCF26 42%);
-  background: -moz-radial-gradient(circle farthest-corner at center center, #CF2411 0%, #0CCF26 42%);
-  background: radial-gradient(circle farthest-corner at center center, #CF2411 0%, #0CCF26 42%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
 
 export default App;
