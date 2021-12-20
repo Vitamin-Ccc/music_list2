@@ -1,5 +1,7 @@
 import React from "react";
-import { Card, Grid } from 'semantic-ui-react';
+import { Card, Icon } from 'semantic-ui-react';
+import { Star } from "./components/Animation";
+import { ListHeader } from "./components/HeaderText";
 import Song from "./Song";
 
 class Songs extends React.Component {
@@ -10,9 +12,15 @@ class Songs extends React.Component {
   };
   render() {
     return (
+      <div>
+        <ListHeader>
+          List of Songs
+        </ListHeader>
       <Card.Group itemsPerRow={3}>
         {this.renderSongs()}
       </Card.Group>
+      <Star><Icon name = "star" /></Star>
+      </div>
     )
   }
 }
