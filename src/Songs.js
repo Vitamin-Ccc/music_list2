@@ -10,7 +10,7 @@ class Songs extends React.Component {
   };
   render() {
     return (
-      <Card.Group itemsPerRow={4}>
+      <Card.Group itemsPerRow={3}>
         {this.renderSongs()}
       </Card.Group>
     )

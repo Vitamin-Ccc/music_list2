@@ -1,5 +1,7 @@
 import React from "react";
-import { Header, Form, Button } from "semantic-ui-react";
+import { Button, Form } from "semantic-ui-react";
+import { StyledButton } from "./components/Button";
+import { FormHeader } from "./components/HeaderText";
 
 class SongForm extends React.Component {
   state = { name: "", artist: "", image: "", show: false };
@@ -24,8 +26,10 @@ class SongForm extends React.Component {
   render() {
     return (
       <div>
-        <Header>New Song Form</Header>
-        <Button onClick = {this.toggleForm}>{this.state.show ? "Hide" : "Show"}</Button>
+        <FormHeader>New Song Form</FormHeader>
+        <StyledButton onClick = {this.toggleForm}>{this.state.show ? "Hide" : "Show"}</StyledButton>
+        <br/>
+        <br/>
         {this.state.show && (
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
